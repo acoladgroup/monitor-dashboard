@@ -1,0 +1,35 @@
+<mat-card>
+  <div class="panel">
+    <div class="panel-header primary">
+      <h2 class="mat-h3">
+        <mat-icon class="bg-primary mat-icon-head" width="10">person</mat-icon> <span i18n>User profile</span></h2>
+    </div>
+    <div class="spinner-container" align="center" *ngIf="loading$ | async">
+      <mat-spinner></mat-spinner>
+    </div>
+    <div *ngIf="profile" fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="10px grid">
+      <mat-form-field class="example-full-width" fxFill fxFlex="50%">
+        <input matInput placeholder="First name" i18n-placeholder value="{{profile.UserProfile.firstName}}" readonly>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFill fxFlex="50%">
+        <input matInput placeholder="Last name" i18n-placeholder value="{{profile.UserProfile.lastName}}" readonly>
+      </mat-form-field>
+      <div fxFill fxFlex="50%">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px grid">
+          <mat-icon fxFill fxFlex="40px" class="icon">mail</mat-icon>
+          <mat-form-field fxFill fxFlex="calc(100% - 40px)">
+            <input matInput placeholder="Email" i18n-placeholder value="{{profile.UserProfile.login}}" readonly>
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxFill fxFlex="50%">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px grid">
+          <mat-icon fxFill fxFlex="40px" class="icon">phone</mat-icon>
+          <mat-form-field fxFill fxFlex="calc(100% - 40px)">
+            <input matInput placeholder="phone" i18n-placeholder value="{{profile.UserProfile.phoneNumber}}" readonly>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

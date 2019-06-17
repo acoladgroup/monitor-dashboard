@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+/*@import "./amplexor-theme.scss";*/
+
+body {
+  margin : 0;
+  background-color: #fafafa;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+table {
+  width : 100%;
+}
+
+table tr td.table-actions{
+  width : 120px;
+}
+
+table tr td.table-actions a{
+  display: none;
+  color: #555;
+  padding: 5px;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+table tr:hover td.table-actions a , table tr.selected td.table-actions a{
+  display: inline-block;
+}
+
+table tr td.table-actions a:hover{
+  background-color: #ddd;
+}
+
+
+
+table.selectable tr.mat-row:hover , table.selectable tr.mat-row.selected{
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.panel {
+  position : relative;
+
+}
+
+.panel .panel-header {
+  position: relative;
+  top: -35px;
+  margin-top: 0px;
+  width: calc(100% - 40px);
+  box-shadow: 0px 3px 15px 0px #888;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px ;
+}
+
+.panel .panel-header.primary {
+  background-color: #572b7a;
+}
+
+.panel .panel-header.accent {
+  color : #555;
+  background-color: #ffd740;
+}
+
+.panel .panel-header h1 ,.panel .panel-header h2 ,.panel .panel-header h3, .panel .panel-header h4 {
+  margin : 0;
+}
+
+
+.clear {
+  clear: both;
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+.headerbutton {
+  background-color: #572b7a;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial;
+  color: white
+}
+
+button.selected {
+  background-color: #af87f5;
+}
+
+button:hover {
+  background-color: #af87f5;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.warn {
+  background-color: #f44336;
+}
+
+.green {
+  background-color: #7ce073;
+}
+
+.bg-primary{
+  background-color: #572b7a;
+}
+
+.bg-danger {
+  background-color: #cc0000;
+}
+
+.primary {
+  color : #572b7a;
+}
+
+button.mat-raised-button {
+  margin: 3px
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}

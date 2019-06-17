@@ -1,0 +1,90 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+nav#topmenu {
+  height: 40px;
+  width: calc(100% - 20px);
+  background-color: #eaeaea;
+}
+
+.mat-drawer-container {
+  height: 100vh;
+  background-color: #eaeaea;
+}
+
+
+mat-drawer{
+  box-shadow : 0px 0px 20px 0px;
+  width: 100%;
+  max-width: 230px;
+  padding-top:15px;
+}
+
+
+.menu-item span{
+  padding-top : 2px;
+  margin-left : 5px;
+  color : #777;
+}
+
+.span{
+  padding-top : 2px;
+  margin-left : 5px;
+  color : #777;
+}
+
+.active_menu{
+  padding-top : 2px;
+  margin-left : 5px;
+  color : #59297D;
+  font-weight: bold;
+}
+
+.menu-item .mat-icon{
+  color : #777;
+}
+
+
+#logo > div {
+  padding : 0px 10px;
+  text-align: center;
+}
+
+#logo > div > hr {
+  color : #999;
+}
+
+#logout-button{
+  font-weight: bold;
+  margin-right: 20px;
+  color:#fff;
+  background-color: #673ab7;
+}
+
+#logout-button:hover{
+  background-color: #58319b;
+}
+
+#username {
+  margin-right: 20px;
+  margin-top: 10px;
+  color: #572b7a;
+}
+
+#main {
+  background-color: #eaeaea;
+}
+
+.mat-nav-list .mat-list-item:hover {
+  color:#fff;
+  background-color:#e08f9c;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.mat-fab.mat-primary[_ngcontent-c1], .mat-flat-button.mat-primary[_ngcontent-c1], .mat-mini-fab.mat-primary[_ngcontent-c1], .mat-raised-button.mat-primary[_ngcontent-c1]{
+  background-color : #59297D;
+}

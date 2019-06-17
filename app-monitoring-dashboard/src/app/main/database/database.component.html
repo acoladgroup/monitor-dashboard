@@ -1,0 +1,85 @@
+<div ng-show="showLoader" fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.lt-lg="column" fxLayoutGap="10px grid">
+  <div fxFill fxFlex="50%" fxFlex.gt-lg="50%">
+    <mat-card>
+      <mat-card-content>
+        <h3 class="primary">
+          <mat-icon class="bg-primary mat-icon-head" width="5200">pie_chart</mat-icon>
+          <span i18n>Database Status</span>
+        </h3>
+        <canvas id="databaseStatus">{{ databaseStatus }}</canvas>
+        <div class="spinner-container" align="center" *ngIf="databaseStatusLoading$ | async">
+          <mat-spinner></mat-spinner>
+        </div>
+      </mat-card-content>
+      <a href="#/database-status">View Details</a>
+    </mat-card>
+  </div>
+
+  <div fxFill fxFlex="50%" fxFlex.gt-lg="50%">
+    <mat-card>
+      <mat-card-content>
+        <h3 class="primary">
+          <mat-icon class="bg-primary mat-icon-head" width="5200">pie_chart</mat-icon>
+          <span i18n>Backup Status</span>
+        </h3>
+        <canvas id="backupStatusPie">{{ backupStatusPie }}</canvas>
+        <div class="spinner-container" align="center" *ngIf="backStatusLoading$ | async">
+          <mat-spinner></mat-spinner>
+        </div>
+      </mat-card-content>
+      <a href="#/database-backup-status">View Details</a>
+    </mat-card>
+  </div>
+
+  <div fxFill fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <h3 class="primary">
+          <mat-icon class="bg-primary mat-icon-head" width="10">assignment</mat-icon>
+          <span i18n>Space Occupied > 80%</span>
+        </h3>
+        <table mat-table #table [dataSource]="dataSource">
+
+          <ng-container matColumnDef="stat">
+            <th mat-header-cell *matHeaderCellDef i18n></th>
+            <td mat-cell *matCellDef="let element">
+              <i class="material-icons" [ngClass]="getClass(element.percentageUsed)" matTooltip="{{element.percentageUsed}}" i18n>fiber_manual_record</i>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="databaseName">
+            <th mat-header-cell *matHeaderCellDef i18n>Database Name</th>
+            <td mat-cell *matCellDef="let element"> {{element.databaseName}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="databaseType">
+            <th mat-header-cell *matHeaderCellDef i18n>Database Type</th>
+            <td mat-cell *matCellDef="let element"> {{element.databaseType}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="metricColletionTS">
+            <th mat-header-cell *matHeaderCellDef i18n>Metric Colletion TS</th>
+            <td mat-cell *matCellDef="let element"> {{element.collectionTime | date : "medium"}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="tablespace">
+            <th mat-header-cell *matHeaderCellDef i18n>Tablespace</th>
+            <td mat-cell *matCellDef="let element"> {{element.tableSpace}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="used">
+            <th mat-header-cell *matHeaderCellDef i18n>% Used</th>
+            <td mat-cell *matCellDef="let element"> {{element.percentageUsed}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="['stat', 'databaseName' , 'databaseType' , 'metricColletionTS' , 'tablespace' , 'used']"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['stat', 'databaseName' , 'databaseType' , 'metricColletionTS', 'tablespace' , 'used'];"></tr>
+        </table>
+        <div class="spinner-container" align="center" *ngIf="tableSpaceLoading$ | async">
+          <mat-spinner></mat-spinner>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

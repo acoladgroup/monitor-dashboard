@@ -1,0 +1,77 @@
+<div ng-show="showLoader" fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.lt-lg="column" fxLayoutGap="10px grid">
+        <div fxFill fxFlex="100%" fxFlex.gt-lg="100%">
+                <mat-card>
+                        <mat-card-content>
+                                <h2 class="primary">
+                                        <mat-icon class="bg-primary mat-icon-head" width="10">table_chart</mat-icon>
+                                        <span i18n>Backup Status</span>
+                                </h2>
+                                <table mat-table #table [dataSource]="backupSource">
+                                        <ng-container matColumnDef="stat">
+                                                <th mat-header-cell *matHeaderCellDef i18n></th>
+                                                <td mat-cell *matCellDef="let element">
+                                                        <i class="material-icons {{element.status}}" matTooltip="{{element.status}}" i18n>fiber_manual_record</i>
+                                                </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="lifeCycleStatus">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Life Cycle Status</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.lifeCycleStatus}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="lineOfBusiness">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Line of Business</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.lineOfBusiness}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="targetName">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Target Name</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.targetName}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="backupType">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Backup Type</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.backupType}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="startTime">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Start Time</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.startTime  | date : "medium"}} </td>
+                                        </ng-container>
+
+                                         <ng-container matColumnDef="timeTaken">
+                                                        <th mat-header-cell *matHeaderCellDef i18n>Time Taken</th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.timeTaken}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="inputSize">
+                                                        <th mat-header-cell *matHeaderCellDef i18n>Input Size</th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.inputSize}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="outputSize">
+                                                        <th mat-header-cell *matHeaderCellDef i18n>Output Size</th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.outputSize}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="daysAgo">
+                                                        <th mat-header-cell *matHeaderCellDef i18n>Days Ago</th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.daysAgo}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="collectionTime">
+                                                        <th mat-header-cell *matHeaderCellDef i18n>Colletction Time</th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.collectionTime | date : "medium"}}  </td>
+                                        </ng-container>
+
+                                        <tr mat-header-row *matHeaderRowDef="['stat', 'lifeCycleStatus' , 'lineOfBusiness' ,  'targetName' , 'backupType', 'startTime' , 'timeTaken', 'inputSize', 'outputSize', 'daysAgo', 'collectionTime']"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: ['stat', 'lifeCycleStatus' , 'lineOfBusiness' ,  'targetName' , 'backupType', 'startTime' , 'timeTaken', 'inputSize', 'outputSize', 'daysAgo', 'collectionTime' ];"></tr>
+                                        
+                                </table>
+                                <div class="spinner-container" align="center" *ngIf="backStatusLoading$ | async">
+                                                <mat-spinner></mat-spinner>
+                                            </div>
+                        </mat-card-content>
+                </mat-card>
+        </div>
+</div>

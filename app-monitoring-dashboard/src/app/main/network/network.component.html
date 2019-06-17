@@ -1,0 +1,64 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.lt-lg="column" fxLayoutGap="10px grid">
+    <div fxFill fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <h3 class="primary">
+                    <mat-icon class="bg-primary mat-icon-head" width="10">network_cell</mat-icon>
+                    <span i18n>Network</span>
+                </h3>
+                <table mat-table #table [dataSource]="dataSource">
+                    <ng-container matColumnDef="country">
+                        <th mat-header-cell *matHeaderCellDef i18n>Country</th>
+                        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="subsidiary">
+                        <th mat-header-cell *matHeaderCellDef i18n>Subsidiary</th>
+                        <td mat-cell *matCellDef="let element"> {{element.subsidiaryLocation}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="MPLS">
+                        <th mat-header-cell style="text-align:center;" *matHeaderCellDef i18n>MPLS</th>
+                        <td mat-cell *matCellDef="let element">
+                            <pre align="center"><i class="material-icons {{element.mplsStatus}}" matTooltip="{{element.mplsStatus}}" i18n>fiber_manual_record</i></pre>
+                            <pre align="center">{{element.mplsDownloadSpeed}}</pre>
+                            <pre align="center">{{element.mplsUploadSpeed}}</pre> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryISP">
+                        <th mat-header-cell style="text-align:center;" *matHeaderCellDef i18n>Primary ISP</th>
+                        <td mat-cell *matCellDef="let element">
+                            <pre align="center"><i class="material-icons {{element.primaryISPStatus}}" matTooltip="{{element.primaryISPStatus}}" i18n>fiber_manual_record</i></pre>
+                            <pre align="center">{{element.primaryIPSDownloadSpeed}}</pre>
+                            <pre align="center">{{element.primaryISPUploadSpeed}}</pre> </td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="secondaryISP">
+                        <th mat-header-cell style="text-align:center;" *matHeaderCellDef i18n>Secondary ISP</th>
+                        <td mat-cell *matCellDef="let element">
+                            <pre align="center"><i class="material-icons {{element.secondaryISPStatus}}" matTooltip="{{element.secondaryISPStatus}}" i18n>fiber_manual_record</i></pre>
+                            <pre align="center">{{element.secondaryISPDownloadSpeed}}</pre>
+                            <pre align="center">{{element.secondaryISPUploadSpeed}}</pre> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="MPLSSG">
+                        <th mat-header-cell style="text-align:center;" *matHeaderCellDef i18n>MPLS SG</th>
+                        <td mat-cell *matCellDef="let element">
+                            <pre align="center"><i class="material-icons {{element.mplsSGStatus}}" matTooltip="{{element.mplsSGStatus}}" i18n>fiber_manual_record</i></pre>
+                            <pre align="center">{{element.mplsSGDownloadSpeed}}</pre>
+                            <pre align="center">{{element.mplsSGUploadSpeed}}</pre> </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="[ 'country' , 'subsidiary' ,'MPLS' , 'primaryISP' , 'secondaryISP','MPLSSG']"></tr>
+                    <tr mat-row *matRowDef="let row; columns: ['country' , 'subsidiary' , 'MPLS', 'primaryISP' , 'secondaryISP','MPLSSG'];"></tr>
+                </table>
+
+                <div class="spinner-container" align="center" *ngIf="networkInfoLoading$ | async">
+                    <mat-spinner></mat-spinner>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>

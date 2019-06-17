@@ -1,0 +1,56 @@
+body {
+  padding-top: 0 !important;
+}
+
+#login-container {
+  width : 600px;
+  display: block;
+  margin: auto;
+}
+
+#login-container mat-form-field{
+  width: 100%;
+}
+
+#login-container button{
+  width: 100px;
+}
+
+#login-box-header {
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+   #login-container {
+    width : 100%;
+  }
+}
+
+#title {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px
+}
+
+mat-card {
+  padding : 0;
+}
+
+#login-container mat-card-header > div {
+  text-align: center; 
+  width : 100%;
+  padding : 20px;
+} 
+
+
+#login-container mat-card-header hr{
+  width : 50%;
+  opacity: 0.4;
+  margin: 20px auto;
+}
+
+#login-container form{
+  padding : 20px;
+}

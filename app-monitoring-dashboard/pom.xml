@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.amplexor.it</groupId>
+    <artifactId>it-monitoring-dashboard</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>IT Monitoring Dashboard</name>
+    <description>IT Monitoring Dashboard</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <project.scm.id>git.amplexor.com</project.scm.id>
+        <gitUrl>https://git.amplexor.com/TBD</gitUrl>
+      <tomcatManagerUrl>http://PT01PW-NB034.lu.euroscript.local:8081/manager/text</tomcatManagerUrl>
+      <tomcatUser>admin</tomcatUser>
+      <tomcatPassword>demoDEMO123</tomcatPassword>
+    </properties>
+
+  <profiles>
+    <profile>
+			<id>prod</id>
+			<properties>
+				<tomcatManagerUrl>http://PT01PW-NB034.lu.euroscript.local:8081/manager/text</tomcatManagerUrl>
+				<tomcatUser>admin</tomcatUser>
+				<tomcatPassword>welcome1</tomcatPassword>
+			</properties>
+		</profile>
+  </profiles>
+
+
+    <build>
+        <finalName>dashboard</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>${tomcatManagerUrl}</url>
+                  <username>${tomcatUser}</username>
+                  <password>${tomcatPassword}</password>
+                    <path>/dashboard</path>
+                    <update>true</update>
+					<warFile>dist/dashboard/dashboard.zip</warFile>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+    <scm>
+        <connection>scm:git:${gitUrl}</connection>
+        <developerConnection>scm:git:${gitUrl}</developerConnection>
+        <url>${gitUrl}</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>AMSY</id>
+            <url>
+                http://nexus-02.eudoc.euroscript.local/content/repositories/euroscript-forge/
+            </url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <organization>
+        <name>Amplexor</name>
+        <url>http://www.amplexor.com</url>
+    </organization>
+
+   <developers>
+		 <developer>
+            <id>hmp</id>
+            <name>Helder Marques</name>
+        </developer>
+    </developers>
+
+</project>

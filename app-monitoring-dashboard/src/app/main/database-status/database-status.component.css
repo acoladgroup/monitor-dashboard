@@ -1,0 +1,28 @@
+h2 {
+  margin-top : 0px;
+}
+
+h2 > mat-icon {
+  display: inline;
+  padding: 7px;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 25px;
+  vertical-align: bottom;
+}
+
+.Down {
+  color: rgba(255, 0, 0, 0.733);
+}
+
+.Up {
+  color: rgb(0, 128, 0);
+ }
+
+.Unreachable {
+  color: rgba(128, 128, 128, 0.918);
+}
+
+.Blackout {
+  color: rgba(0, 0, 0, 0.979);
+}

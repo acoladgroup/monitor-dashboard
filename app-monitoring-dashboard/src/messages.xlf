@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en">
+  <file original="ng.template" id="ngi18n">
+    <unit id="4612983318611289385">
+      <notes>
+        <note category="location">app/notfound/notfound.component.ts:1</note>
+      </notes>
+      <segment>
+        <source>Page under construction</source>
+      </segment>
+    </unit>
+    <unit id="5479180591358645090">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:5</note>
+      </notes>
+      <segment>
+        <source>User profile</source>
+      </segment>
+    </unit>
+    <unit id="5342432350421167093">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:12</note>
+      </notes>
+      <segment>
+        <source>First name</source>
+      </segment>
+    </unit>
+    <unit id="3586674587150281199">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:15</note>
+      </notes>
+      <segment>
+        <source>Last name</source>
+      </segment>
+    </unit>
+    <unit id="4768749765465246664">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:21</note>
+      </notes>
+      <segment>
+        <source>Email</source>
+      </segment>
+    </unit>
+    <unit id="4425959074279579115">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:29</note>
+      </notes>
+      <segment>
+        <source>phone</source>
+      </segment>
+    </unit>
+    <unit id="1826215573205981970">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:42</note>
+      </notes>
+      <segment>
+        <source>Company</source>
+      </segment>
+    </unit>
+    <unit id="9134501311668819093">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:49</note>
+      </notes>
+      <segment>
+        <source>Name-1</source>
+      </segment>
+    </unit>
+    <unit id="5548521655304244459">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:54</note>
+      </notes>
+      <segment>
+        <source>Phone-1</source>
+      </segment>
+    </unit>
+    <unit id="8258557650672616241">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:58</note>
+      </notes>
+      <segment>
+        <source>Name-2</source>
+      </segment>
+    </unit>
+    <unit id="6182999231217899706">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:63</note>
+      </notes>
+      <segment>
+        <source>Phone-2</source>
+      </segment>
+    </unit>
+    <unit id="2169883503765557721">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:67</note>
+      </notes>
+      <segment>
+        <source>Name-3</source>
+      </segment>
+    </unit>
+    <unit id="3744362230254898945">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:72</note>
+      </notes>
+      <segment>
+        <source>Phone-3</source>
+      </segment>
+    </unit>
+    <unit id="6304432362546770951">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:77</note>
+      </notes>
+      <segment>
+        <source>Address</source>
+      </segment>
+    </unit>
+    <unit id="7647550512660678493">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:81</note>
+      </notes>
+      <segment>
+        <source>Postal Code</source>
+      </segment>
+    </unit>
+    <unit id="2314075913167237221">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:85</note>
+      </notes>
+      <segment>
+        <source>City</source>
+      </segment>
+    </unit>
+    <unit id="5272456965638775248">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:89</note>
+      </notes>
+      <segment>
+        <source>Region/State</source>
+      </segment>
+    </unit>
+    <unit id="516176798986294299">
+      <notes>
+        <note category="location">app/main/profile/profile-details/profile-details.component.ts:93</note>
+      </notes>
+      <segment>
+        <source>Country</source>
+      </segment>
+    </unit>
+    <unit id="5236389429782315657">
+      <notes>
+        <note category="location">app/common/dialog/dialog.component.ts:6</note>
+      </notes>
+      <segment>
+        <source>An error occurred. Please contact an administrator.</source>
+      </segment>
+    </unit>
+    <unit id="7452892696659190764">
+      <notes>
+        <note category="location">app/common/dialog/dialog.component.ts:9</note>
+      </notes>
+      <segment>
+        <source>Error details</source>
+      </segment>
+    </unit>
+    <unit id="7819314041543176992">
+      <notes>
+        <note category="location">app/common/dialog/dialog.component.ts:19</note>
+      </notes>
+      <segment>
+        <source>Close</source>
+      </segment>
+    </unit>
+    <unit id="601632249374374177">
+      <notes>
+        <note category="location">app/login/login.component.ts:6</note>
+      </notes>
+      <segment>
+        <source>Transplicity Linguist Portal</source>
+      </segment>
+    </unit>
+    <unit id="5248717555542428023">
+      <notes>
+        <note category="location">app/login/login.component.ts:19</note>
+      </notes>
+      <segment>
+        <source>Username</source>
+      </segment>
+    </unit>
+    <unit id="2454050363478003966">
+      <notes>
+        <note category="location">app/login/login.component.ts:34</note>
+      </notes>
+      <segment>
+        <source>Login</source>
+      </segment>
+    </unit>
+    <unit id="931252989873527145">
+      <notes>
+        <note category="location">app/login/login.component.ts:35</note>
+      </notes>
+      <segment>
+        <source>Remember me</source>
+      </segment>
+    </unit>
+    <unit id="6570363013146073520">
+      <notes>
+        <note category="location">app/main/main.component.ts:13</note>
+      </notes>
+      <segment>
+        <source>Dashboard</source>
+      </segment>
+    </unit>
+    <unit id="4915431133669985304">
+      <notes>
+        <note category="location">app/main/main.component.ts:16</note>
+      </notes>
+      <segment>
+        <source>Profile</source>
+      </segment>
+    </unit>
+    <unit id="293202751009664066">
+      <notes>
+        <note category="location">app/main/main.component.ts:22</note>
+      </notes>
+      <segment>
+        <source>Evaluations</source>
+      </segment>
+    </unit>
+    <unit id="9223174834682042610">
+      <notes>
+        <note category="location">app/main/main.component.ts:25</note>
+      </notes>
+      <segment>
+        <source>Holidays</source>
+      </segment>
+    </unit>
+    <unit id="7051639082644442217">
+      <notes>
+        <note category="location">app/main/main.component.ts:28</note>
+      </notes>
+      <segment>
+        <source>Purchase order</source>
+      </segment>
+    </unit>
+    <unit id="2363158409383485440">
+      <notes>
+        <note category="location">app/main/main.component.ts:31</note>
+      </notes>
+      <segment>
+        <source>Invoices</source>
+      </segment>
+    </unit>
+    <unit id="3797778920049399855">
+      <notes>
+        <note category="location">app/main/main.component.ts:40</note>
+      </notes>
+      <segment>
+        <source>Logout</source>
+      </segment>
+    </unit>
+  </file>
+</xliff>

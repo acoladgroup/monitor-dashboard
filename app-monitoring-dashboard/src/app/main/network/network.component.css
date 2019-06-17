@@ -1,0 +1,73 @@
+#title {
+    color: rgb(8, 8, 8);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px
+  }
+
+h2 {
+    margin-top : 0px;
+}
+
+h2 > mat-icon {
+    display: inline;
+    padding: 7px;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 25px;
+    vertical-align: bottom;
+}
+
+h3 > mat-icon {
+    display: inline;
+    padding: 7px;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 25px;
+    vertical-align: bottom;
+}
+
+.high {
+    background-color: red;
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.733);
+}
+  
+.yellow {
+color: rgba(255, 179, 37, 0.87);
+}
+  
+.white {
+color: rgb(255, 255, 255);
+}
+
+.CRITICAL {
+color: rgba(255, 0, 0, 0.733);
+}
+
+.UP {
+color: rgb(0, 128, 0);
+}
+
+.WARNING {
+color: rgba(255, 179, 37, 0.87);
+}
+
+.UNKNOWN {
+color: rgb(194, 194, 185);
+}
+
+.API_UNKNOWN {
+color: rgb(0, 0, 0);
+} 
+
+.NOT_DEFINED {
+color: rgb(255, 255, 255);
+} 
+
+pre {
+font-family: "courier new", courier, monospace;
+font-size: 13px;
+}

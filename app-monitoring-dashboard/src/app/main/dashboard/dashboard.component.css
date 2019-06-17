@@ -1,0 +1,286 @@
+#title {
+    color: rgb(8, 8, 8);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px
+  }
+
+
+h2 {
+  margin-top : 0px;
+}
+
+h2 > mat-icon {
+  display: inline;
+  padding: 7px;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 25px;
+  vertical-align: bottom;
+}
+
+h3 > mat-icon {
+  display: inline;
+  padding: 7px;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 25px;
+  vertical-align: bottom;
+}
+
+.high {
+  background-color: red;
+}
+
+pre {
+  margin:0;
+  font-family: "courier new", courier, monospace;
+  font-size: 13px;
+}
+
+td.mat-cell:first-child, td.mat-footer-cell:first-child, th.mat-header-cell:first-child {
+  padding-left: 1px;
+}
+
+.mat-header-cell {
+  font-size: 12px;
+  /* font-weight: 500; */
+  word-spacing: 9999px;
+}
+
+
+.pre-left {
+  margin:0;
+  text-align: justify;
+  border-left: 1px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
+}
+
+.MPLS {
+  margin:0;
+  /*text-align: justify;*/
+  border-left: 1px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
+}
+
+.SDWAN {
+  /*text-align: justify;*/
+  display: none;
+}
+
+.ISP1 {
+  margin:0;
+  /*text-align: justify;*/
+  border-left: 1px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
+}
+
+.ISP2 {
+  margin:0;
+  /*text-align: justify;*/
+  border-left: 1px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
+}
+
+th {
+  font-weight: bold;
+}
+
+.mat-card {
+  padding: 20px;
+  
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.text-white {
+  color: rgb(255, 255, 255);
+}
+
+.text-up {
+  color:white;
+}
+
+.text-down {
+  color:white;
+}
+
+.text-pending {
+  color:white;
+}
+
+html body .font-light {
+  font-weight: 200;
+}
+
+.card_summary {
+  position: relative;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  margin-right: 5px;
+  background-clip: border-box;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.125);
+  border-right-color: rgba(0, 0, 0, 0.125);
+  border-bottom-color: rgba(0, 0, 0, 0.125);
+  border-left-color: rgba(0, 0, 0, 0.125);
+}
+
+.card_summary_up {
+  background-color: rgb(5, 141, 5);
+}
+
+.card_summary_down {
+  background-color: rgba(255, 0, 0, 0.733);
+}
+
+.card_summary_pending {
+  background-color: rgba(255, 179, 37, 0.87);
+}
+
+
+div.thumb {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(230, 228, 228, 0.842);
+  background-color: rgba(230, 228, 228, 0.842);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+div.div_up {
+  border-right-color: rgb(0, 128, 0);
+  background-color: rgb(0, 128, 0);
+}
+
+div.div_down {
+  border-right-color: rgba(255, 0, 0, 0.733);
+  background-color: rgba(255, 0, 0, 0.733);
+}
+
+div.div_pending {
+  border-right-color: rgba(255, 179, 37, 0.87);
+  background-color: rgba(255, 179, 37, 0.87);
+}
+
+mat-icon.white-icon {
+  color: white;
+}
+
+.Target_Down {
+  color: rgba(255, 0, 0, 0.733);
+}
+
+.Target_Up {
+  color: rgb(0, 128, 0);
+ }
+
+.Pending_Unknown {
+  color: rgba(255, 179, 37, 0.87);
+}
+
+.mat-column-status {
+  flex: 1 0 1px;
+  width:1%;
+  float:center;  
+}
+
+.mat-column-name {
+  flex: 1 0 25px;  
+  width:5%;
+  float:center;
+  word-wrap:break-word;
+}
+
+.columnList {
+  list-style-type: none;
+  column-count: 3;
+  padding: 2px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+  overflow: auto;
+}
+
+.card_list {
+  padding: 2px;
+  /*height:380px;*/
+  height: calc(850px - (20vw));
+  flex: 1;
+  display: flex;
+  overflow: auto;
+}
+
+
+.mat-card {
+  padding: 13px;
+}
+
+
+.mat-list-item {
+  height:42px;
+}
+
+.menu-item span{
+  padding-top : 2px;
+  margin-left : 5px;
+  color : #777;
+  font-weight:bold;
+}
+
+.has-delay{
+  color: rgba(255, 0, 0, 0.733);
+}
+
+.span{
+  padding-top : 2px;
+  margin-left : 5px;
+  color : #777;
+  font-weight:bold;
+}
+
+.CRITICAL {
+  color: rgba(255, 0, 0, 0.733);
+}
+
+.UP {
+  color: rgb(0, 128, 0);
+ }
+
+.WARNING {
+  color: rgba(255, 179, 37, 0.87);
+}
+
+.UNKNOWN {
+  color: rgb(194, 194, 185);
+ }
+
+ .API_UNKNOWN {
+  color: rgb(0, 0, 0);
+ } 
+
+ .NOT_DEFINED {
+  color: rgb(255, 255, 255);
+ } 
+
+ .mat-cell, .mat-footer-cell {
+  font-size: 12px;
+}

@@ -1,0 +1,22 @@
+<div style="position: relative; padding-top: 55px;">
+  <div class="mat-dialog-header bg-danger">
+    <h2 mat-dialog-title *ngIf="data.title" >{{data.title}}</h2>
+  </div>
+  <mat-dialog-content>
+    <div style="margin-bottom: 10px" i18n>An error occurred. Please contact an administrator.</div>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header *ngIf="data.content">
+        <mat-panel-title i18n>Error details</mat-panel-title>
+      </mat-expansion-panel-header>
+      <div [innerHTML]="data.content"></div>
+    </mat-expansion-panel>
+
+  </mat-dialog-content>
+  <br/>
+  <hr>
+  <mat-dialog-actions>
+    <div>
+      <button mat-raised-button (click)="onClose()" i18n>Close</button>&nbsp;
+    </div>
+  </mat-dialog-actions>
+</div>

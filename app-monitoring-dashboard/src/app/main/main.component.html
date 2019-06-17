@@ -1,0 +1,91 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer style="width: 200px" #sidenav class="mat-elevation-z4" #drawer mode="side" [(opened)]="opened">
+    <div id="logo">
+      <div>
+        <img src="{{deploypath}}/assets/images/logo_amplexor.png" width="150" />
+        <hr/>
+      </div>
+    </div>
+    <mat-nav-list>
+      <a class="menu-item" routerLinkActive #rla="routerLinkActive" mat-list-item routerLink="/dashboard">
+        <mat-icon [ngStyle]="{'color': (rla.isActive) ? '#59297D' : ''}">dashboard</mat-icon>
+        <a class="{{ rla.isActive ? 'active_menu' : 'span'}}" i18n>Dashboard</a>
+      </a>
+      <a class="menu-item" routerLinkActive #rla1="routerLinkActive" mat-list-item routerLink="/middleware">
+        <mat-icon [ngStyle]="{'color': (rla1.isActive) ? '#59297D' : ''}">build</mat-icon>
+        <a class="{{ rla1.isActive ? 'active_menu' : 'span'}}" i18n>Middleware</a>
+      </a>
+      <a class="menu-item" routerLinkActive #rla2="routerLinkActive" (click)="menu = database" mat-list-item routerLink="/database">
+        <mat-icon [ngStyle]="{'color': (rla2.isActive) ? '#59297D' : ''}">assignment</mat-icon>
+        <a class="{{ rla2.isActive ? 'active_menu' : 'span'}}" i18n>Database</a>
+      </a>
+      <a *ngIf="rla2.isActive || router.url.includes('database')"  class="menu-item" routerLinkActive #rla21="routerLinkActive" mat-list-item style="margin-left:25px;" routerLink="/database-monitor">
+        <mat-icon [ngStyle]="{'color': (rla21.isActive) ? '#59297D' : ''}">show_chart</mat-icon>
+        <a class="{{ rla21.isActive ? 'active_menu' : 'span'}}" i18n>Monitor</a>
+      </a> 
+      <a *ngIf="rla2.isActive || router.url.includes('database')"  class="menu-item" routerLinkActive #rla22="routerLinkActive" mat-list-item style="margin-left:25px;" routerLink="/database-status">
+        <mat-icon [ngStyle]="{'color': (rla22.isActive) ? '#59297D' : ''}">table_chart</mat-icon>
+        <a class="{{ rla22.isActive ? 'active_menu' : 'span'}}" i18n>DB Status</a>
+      </a> 
+      <a *ngIf="rla2.isActive || router.url.includes('database')"  class="menu-item" routerLinkActive #rla23="routerLinkActive" mat-list-item style="margin-left:25px;" routerLink="/database-backup-status">
+        <mat-icon [ngStyle]="{'color': (rla23.isActive) ? '#59297D' : ''}">table_chart</mat-icon>
+        <a class="{{ rla23.isActive ? 'active_menu' : 'span'}}" i18n>Backup Status</a>
+      </a>              
+      <a class="menu-item" routerLinkActive #rla3="routerLinkActive" mat-list-item routerLink="/datacenter">
+        <mat-icon [ngStyle]="{'color': (rla3.isActive) ? '#59297D' : ''}">backup</mat-icon>
+        <a class="{{ rla3.isActive ? 'active_menu' : 'span'}}" i18n>DataCenter</a>
+      </a>
+      <a class="menu-item" routerLinkActive #rla4="routerLinkActive" mat-list-item routerLink="/email">
+        <mat-icon [ngStyle]="{'color': (rla4.isActive) ? '#59297D' : ''}">email</mat-icon>
+        <a class="{{ rla4.isActive ? 'active_menu' : 'span'}}" i18n>E-Mail</a>
+      </a>
+      <a class="menu-item" routerLinkActive #rla5="routerLinkActive" mat-list-item routerLink="/network">
+        <mat-icon [ngStyle]="{'color': (rla5.isActive) ? '#59297D' : ''}">network_cell</mat-icon>
+        <a class="{{ rla5.isActive ? 'active_menu' : 'span'}}" i18n>Network</a>
+      </a>
+      <a class="menu-item" routerLinkActive #rla6="routerLinkActive" mat-list-item routerLink="/identity">
+        <mat-icon [ngStyle]="{'color': (rla6.isActive) ? '#59297D' : ''}">person</mat-icon>
+        <a class="{{ rla6.isActive ? 'active_menu' : 'span'}}" i18n>Identity</a>
+      </a>
+      <a class="menu-item" routerLinkActive #rla7="routerLinkActive" mat-list-item routerLink="/security">
+        <mat-icon [ngStyle]="{'color': (rla7.isActive) ? '#59297D' : ''}">security</mat-icon>
+        <a class="{{ rla7.isActive ? 'active_menu' : 'span'}}" i18n>Security</a>
+      </a>     
+      <a class="menu-item" routerLinkActive #rla8="routerLinkActive" mat-list-item href="https://servicedesk.amplexor.com/LDSD_Prod.BridgeIT#form/class_name=IncidentManagement.Incident&lifecycle_name=NewProcess1111" target="_blank">
+        <mat-icon >assistant</mat-icon>
+        <a class="{{ 'span'}}" i18n>Create Incident</a>
+      </a>     
+    </mat-nav-list>  
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <nav id="topmenu" style="background-color:white ;padding: 10px;padding-top: 12px">
+      <a class="pull-left" (click)="toggleSideMenu()">
+         <mat-icon [ngStyle]="{'color': '#59297D' }" matTooltip="Toggle Menu" i18n-matTooltip>menu</mat-icon>
+      </a>
+
+      <a *ngIf="!refreshEnabled" class="pull-left" (click)="toggleRefresh()">
+          <mat-icon [ngStyle]="{'color': '#C0C0C0' }" matTooltip="Automtic Refresh Not Active" i18n-matTooltip>refresh</mat-icon>
+      </a>
+    
+      <a *ngIf="refreshEnabled" class="pull-left"  (click)="toggleRefresh()">
+              <mat-icon [ngStyle]="{'color': '#59297D' }" matTooltip="Automtic Refresh Active" i18n-matTooltip>refresh</mat-icon>
+      </a>
+     
+      
+      <a mat-mini-fab routerLink="/logout" class="pull-right" color="primary">
+        <mat-icon matTooltip="Logout" i18n-matTooltip>exit_to_app</mat-icon>
+      </a>
+      <span class="pull-right">&nbsp;</span>
+      <a mat-mini-fab routerLink="/profile" class="pull-right" color="primary">
+        <mat-icon matTooltip="Profile" i18n-matTooltip>account_circle</mat-icon>
+      </a>
+      <span id="username" class="pull-right" *ngIf="user">{{user.firstName}} {{user.lastName}}</span>
+    </nav>
+    
+    <div  id="main" style="padding: 15px;">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</mat-drawer-container>

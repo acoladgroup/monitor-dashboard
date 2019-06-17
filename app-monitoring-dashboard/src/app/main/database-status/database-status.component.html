@@ -1,0 +1,50 @@
+<div ng-show="showLoader" fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.lt-lg="column" fxLayoutGap="10px grid">
+        <div fxFill fxFlex="100%" fxFlex.gt-lg="100%">
+                <mat-card>
+                        <mat-card-content>
+                                <h2 class="primary">
+                                        <mat-icon class="bg-primary mat-icon-head" width="10">table_chart</mat-icon>
+                                        <span i18n>Database Status</span>
+                                </h2>
+                                <table mat-table #table [dataSource]="dataSource">
+                                        <ng-container matColumnDef="stat">
+                                                <th mat-header-cell *matHeaderCellDef i18n></th>
+                                                <td mat-cell *matCellDef="let element">
+                                                        <i class="material-icons {{element.databaseStatus}}" matTooltip="{{element.databaseStatus}}" i18n>fiber_manual_record</i>
+                                                </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="instanceName">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Instance Name</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.instanceName}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="hostName">
+                                                <th mat-header-cell *matHeaderCellDef i18n>HostName</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.hostName}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="totalMemory">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Total Memory</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.totalMemory}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="version">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Version</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.databaseVersion}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="dataGuardStatus">
+                                                <th mat-header-cell *matHeaderCellDef i18n>Data Guard Status</th>
+                                                <td mat-cell *matCellDef="let element"> {{element.dataGuardStatus}} </td>
+                                        </ng-container>
+
+                                        <tr mat-header-row *matHeaderRowDef="['stat','instanceName' , 'hostName' ,  'totalMemory', 'version' , 'dataGuardStatus']"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: ['stat','instanceName' , 'hostName'  , 'totalMemory', 'version',  'dataGuardStatus' ];"></tr>
+                                </table>
+                                <div class="spinner-container" align="center" *ngIf="databaseStatusLoading$ | async">
+                                        <mat-spinner></mat-spinner>
+                                </div>
+                        </mat-card-content>
+                </mat-card>
+        </div>
+</div>
