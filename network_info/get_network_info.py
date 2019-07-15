@@ -542,14 +542,14 @@ network_matrix = [
           },
           {
             "service": "ISP1",
-            "service_name": "Interface /Common/WAN-1",
-            "host_name": "AMLU_F5",
+            "service_name": "Interface 272",
+            "host_name": "lu01net-f5",
 			"sla_service_name": "ISP1_Luxembourg"
           },
           {
             "service": "ISP2",
-            "service_name": "Interface /Common/WAN-2",
-            "host_name": "AMLU_F5",
+            "service_name": "Interface 288",
+            "host_name": "lu01net-f5",
 			"sla_service_name": "ISP2_Luxembourg"
           },
           {
