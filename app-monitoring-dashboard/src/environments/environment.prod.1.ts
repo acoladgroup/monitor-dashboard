@@ -3,13 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
+  production: false,
   api : {
-    "url" : window['apiUrl'],
+    "url" : "https://monitor.amplexor.com/monitor-dashboard",
     "jwt_client_id" : "testjwtclientid",
     "jwt_client_secret" : "XY7kmzoNzl100"
   },
-  deploypath : window['deploypath'],
+  deploypath : '/dashboard',
 };
 
 /*
