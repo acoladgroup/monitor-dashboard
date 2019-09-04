@@ -780,6 +780,23 @@ network_matrix = [
             "host_name": "us01net-asa1"
           }
         ]
+      },
+	  {
+        "name": "River Falls",
+        "services": [
+          {
+            "service": "ISP1",
+            "service_name": "Interface 02",
+            "host_name": "us02net-asa1",
+			"sla_service_name": "ISP1_RiverFalls"
+          },
+          {
+            "service": "ISP2",
+            "service_name": "Interface 09",
+            "host_name": "us02net-asa1",
+			"sla_service_name": "ISP2_RiverFalls"
+          }
+        ]
       }
     ]
   }
