@@ -464,13 +464,13 @@ network_matrix = [
             "service": "ISP1",
             "service_name": "Interface 02",
             "host_name": "hu01net-asa1",
-			"sla_service_name": "ISP1_Hungary"
+	    "sla_service_name": "ISP1_Hungary"
           },
           {
             "service": "ISP2",
             "service_name": "Interface 04",
             "host_name": "hu01net-asa1",
-                        "sla_service_name": "ISP2_Hungary"
+            "sla_service_name": "ISP2_Hungary"
           }
         ]
       }
@@ -486,13 +486,13 @@ network_matrix = [
             "service": "ISP1",
             "service_name": "Interface 02",
             "host_name": "in01net-asa1",
-			"sla_service_name": "ISP1_India"
+	    "sla_service_name": "ISP1_India"
           },
           {
             "service": "ISP2",
             "service_name": "Interface 05",
             "host_name": "in01net-asa1",
-			"sla_service_name": "ISP2_India"
+	    "sla_service_name": "ISP2_India"
           }
         ]
       }
@@ -699,9 +699,9 @@ network_matrix = [
         "name": "Madrid",
         "services": [
           {
-            "service": "MPLS",
-            "service_name": "Interface 05",
-            "host_name": "es02net-asa1"
+            "service": "SDWAN",
+            "service_name": "PING",
+            "host_name": "es-am02"
           },
           {
             "service": "ISP1",
@@ -714,15 +714,21 @@ network_matrix = [
         "name": "Vitoria",
         "services": [
           {
-            "service": "MPLS",
-            "service_name": "Interface 2",
-            "host_name": "Spain"
+            "service": "SDWAN",
+            "service_name": "PING",
+            "host_name": "sp-am01"
           },
           {
             "service": "ISP1",
             "service_name": "Interface 03",
             "host_name": "es01net-ftd1",
-			"sla_service_name": "ISP1_Vitoria"
+	    "sla_service_name": "ISP1_Vitoria"
+          },
+          {
+            "service": "ISP2",
+            "service_name": "Interface 06",
+            "host_name": "es01net-ftd1",
+            "sla_service_name": "ISP2_Vitoria"
           }
         ]
       }
