@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.sql.Date;
 
 @Entity
-@Table(name="AGGREGATE_SERVICE_STATUS_VW",schema="sysman")
+@Table(name="AGGREGATE_SERVICE_STATUS_VW")
 public class ApplicationServices {
 
     //private String targetGUI;

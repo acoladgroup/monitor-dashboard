@@ -192,7 +192,6 @@ public class NetworkServiceImpl implements NetworkService {
                 {"Augsburg","augsburg"},
                 {"Berlin","berlin"},
                 {"Düsseldorf","dusseldorf"},
-                {"Budapest","budapest"},
                 {"Chennai","chennai"},
                 {"Riga","riga"},
                 {"Bertrange","bertrange"},
@@ -206,7 +205,8 @@ public class NetworkServiceImpl implements NetworkService {
                 {"Vitoria","vitoria"},
                 {"Kreuzlingen","kreuzlingen"},
                 {"Zurich","zurich"},
-                {"Broomfield","broomfield"}
+                {"Westminster","westminster"},
+                {"River Falls","riverfalls"}
         };
 
         Class netowrkServicesClass = Class.forName("com.amplexor.itdashboard.model.NetworkServices");

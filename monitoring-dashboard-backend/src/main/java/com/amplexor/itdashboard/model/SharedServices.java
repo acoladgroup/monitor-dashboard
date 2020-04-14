@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.sql.Date;
 
 @Entity
-@Table(name="SHARED_SERVICE_STATUS_VW",schema="sysman")
+@Table(name="SHARED_SERVICE_STATUS_VW")
 public class SharedServices {
 
     //private String targetGUI;

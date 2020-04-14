@@ -32,7 +32,6 @@ public class NetworkServices {
     private String augsburgStatus;
     private String berlinStatus;
     private String dusseldorfStatus;
-    private String budapestStatus;
     private String chennaiStatus;
     private String rigaStatus;
     private String bertrangeStatus;
@@ -46,7 +45,8 @@ public class NetworkServices {
     private String vitoriaStatus;
     private String kreuzlingenStatus;
     private String zurichStatus;
-    private String broomfieldStatus;
+    private String westminsterStatus;
+    private String riverfallsStatus;
 
     private String shanghaiDownloadSpeed;
     private String suzhouDownloadSpeed;
@@ -64,7 +64,6 @@ public class NetworkServices {
     private String augsburgDownloadSpeed;
     private String berlinDownloadSpeed;
     private String dusseldorfDownloadSpeed;
-    private String budapestDownloadSpeed;
     private String chennaiDownloadSpeed;
     private String rigaDownloadSpeed;
     private String bertrangeDownloadSpeed;
@@ -78,7 +77,8 @@ public class NetworkServices {
     private String vitoriaDownloadSpeed;
     private String kreuzlingenDownloadSpeed;
     private String zurichDownloadSpeed;
-    private String broomfieldDownloadSpeed;
+    private String westminsterDownloadSpeed;
+    private String riverfallsDownloadSpeed;
 
     private String shanghaiUploadSpeed;
     private String suzhouUploadSpeed;
@@ -96,7 +96,6 @@ public class NetworkServices {
     private String augsburgUploadSpeed;
     private String berlinUploadSpeed;
     private String dusseldorfUploadSpeed;
-    private String budapestUploadSpeed;
     private String chennaiUploadSpeed;
     private String rigaUploadSpeed;
     private String bertrangeUploadSpeed;
@@ -110,7 +109,8 @@ public class NetworkServices {
     private String vitoriaUploadSpeed;
     private String kreuzlingenUploadSpeed;
     private String zurichUploadSpeed;
-    private String broomfieldUploadSpeed ;
+    private String westminsterUploadSpeed ;
+    private String riverfallsUploadSpeed ;
 
     private String heverleePercentageHtml;
     private String montrealPercentageHtml;
@@ -130,7 +130,6 @@ public class NetworkServices {
     private String augsburgPercentageHtml;
     private String berlinPercentageHtml;
     private String dusseldorfPercentageHtml;
-    private String budapestPercentageHtml;
     private String chennaiPercentageHtml;
     private String rigaPercentageHtml;
     private String bertrangePercentageHtml;
@@ -144,7 +143,8 @@ public class NetworkServices {
     private String vitoriaPercentageHtml;
     private String kreuzlingenPercentageHtml;
     private String zurichPercentageHtml;
-    private String broomfieldPercentageHtml;
+    private String westminsterPercentageHtml;
+    private String riverfallsPercentageHtml;
 
     public String getHeverleePercentageHtml() {
         return heverleePercentageHtml;
@@ -290,14 +290,6 @@ public class NetworkServices {
         this.dusseldorfPercentageHtml = dusseldorfPercentageHtml;
     }
 
-    public String getBudapestPercentageHtml() {
-        return budapestPercentageHtml;
-    }
-
-    public void setBudapestPercentageHtml(String budapestPercentageHtml) {
-        this.budapestPercentageHtml = budapestPercentageHtml;
-    }
-
     public String getChennaiPercentageHtml() {
         return chennaiPercentageHtml;
     }
@@ -402,12 +394,20 @@ public class NetworkServices {
         this.zurichPercentageHtml = zurichPercentageHtml;
     }
 
-    public String getBroomfieldPercentageHtml() {
-        return broomfieldPercentageHtml;
+    public String getWestminsterPercentageHtml() {
+        return westminsterPercentageHtml;
     }
 
-    public void setBroomfieldPercentageHtml(String broomfieldPercentageHtml) {
-        this.broomfieldPercentageHtml = broomfieldPercentageHtml;
+    public void setWestminsterPercentageHtml(String westminsterPercentageHtml) {
+        this.westminsterPercentageHtml = westminsterPercentageHtml;
+    }
+
+    public String getRiverfallsPercentageHtml() {
+        return riverfallsPercentageHtml;
+    }
+
+    public void setRiverfallsPercentageHtml(String riverfallsPercentageHtml) {
+        this.riverfallsPercentageHtml = riverfallsPercentageHtml;
     }
 
     public String getShanghaiStatus() {
@@ -538,14 +538,6 @@ public class NetworkServices {
         this.dusseldorfStatus = dusseldorfStatus;
     }
 
-    public String getBudapestStatus() {
-        return budapestStatus;
-    }
-
-    public void setBudapestStatus(String budapestStatus) {
-        this.budapestStatus = budapestStatus;
-    }
-
     public String getChennaiStatus() {
         return chennaiStatus;
     }
@@ -650,12 +642,20 @@ public class NetworkServices {
         this.zurichStatus = zurichStatus;
     }
 
-    public String getBroomfieldStatus() {
-        return broomfieldStatus;
+    public String getWestminsterStatus() {
+        return westminsterStatus;
     }
 
-    public void setBroomfieldStatus(String broomfieldStatus) {
-        this.broomfieldStatus = broomfieldStatus;
+    public void setWestminsterStatus(String westminsterStatus) {
+        this.westminsterStatus = westminsterStatus;
+    }
+
+    public String getRiverfallsStatus() {
+        return riverfallsStatus;
+    }
+
+    public void setRiverfallsStatus(String riverfallsStatus) {
+        this.riverfallsStatus = westminsterStatus;
     }
 
     public String getShanghaiDownloadSpeed() {
@@ -786,14 +786,6 @@ public class NetworkServices {
         this.dusseldorfDownloadSpeed = dusseldorfDownloadSpeed;
     }
 
-    public String getBudapestDownloadSpeed() {
-        return budapestDownloadSpeed;
-    }
-
-    public void setBudapestDownloadSpeed(String budapestDownloadSpeed) {
-        this.budapestDownloadSpeed = budapestDownloadSpeed;
-    }
-
     public String getChennaiDownloadSpeed() {
         return chennaiDownloadSpeed;
     }
@@ -898,12 +890,20 @@ public class NetworkServices {
         this.zurichDownloadSpeed = zurichDownloadSpeed;
     }
 
-    public String getBroomfieldDownloadSpeed() {
-        return broomfieldDownloadSpeed;
+    public String getWestminsterDownloadSpeed() {
+        return westminsterDownloadSpeed;
     }
 
-    public void setBroomfieldDownloadSpeed(String broomfieldDownloadSpeed) {
-        this.broomfieldDownloadSpeed = broomfieldDownloadSpeed;
+    public void setWestminsterDownloadSpeed(String westminsterDownloadSpeed) {
+        this.westminsterDownloadSpeed = westminsterDownloadSpeed;
+    }
+
+    public String getRiverfallsDownloadSpeed() {
+        return riverfallsDownloadSpeed;
+    }
+
+    public void setRiverfallsDownloadSpeed(String riverfallsDownloadSpeed) {
+        this.riverfallsDownloadSpeed = riverfallsDownloadSpeed;
     }
 
     public String getShanghaiUploadSpeed() {
@@ -1034,14 +1034,6 @@ public class NetworkServices {
         this.dusseldorfUploadSpeed = dusseldorfUploadSpeed;
     }
 
-    public String getBudapestUploadSpeed() {
-        return budapestUploadSpeed;
-    }
-
-    public void setBudapestUploadSpeed(String budapestUploadSpeed) {
-        this.budapestUploadSpeed = budapestUploadSpeed;
-    }
-
     public String getChennaiUploadSpeed() {
         return chennaiUploadSpeed;
     }
@@ -1146,13 +1138,22 @@ public class NetworkServices {
         this.zurichUploadSpeed = zurichUploadSpeed;
     }
 
-    public String getBroomfieldUploadSpeed() {
-        return broomfieldUploadSpeed;
+    public String getWestminsterUploadSpeed() {
+        return westminsterUploadSpeed;
     }
 
-    public void setBroomfieldUploadSpeed(String broomfieldUploadSpeed) {
-        this.broomfieldUploadSpeed = broomfieldUploadSpeed;
+    public void setWestminsterUploadSpeed(String westminsterUploadSpeed) {
+        this.westminsterUploadSpeed = westminsterUploadSpeed;
     }
+
+    public String getRiverfallsUploadSpeed() {
+        return riverfallsUploadSpeed;
+    }
+
+    public void setRiverfallsUploadSpeed(String riverfallsUploadSpeed) {
+        this.riverfallsUploadSpeed = riverfallsUploadSpeed;
+    }
+
 
     public String getName() {
         return name;
